@@ -5,11 +5,14 @@ angular.module('apocalypses').controller('ApocalypsesController', ['$scope', '$s
 	function($scope, $stateParams, $location, Authentication, Apocalypses) {
 		$scope.authentication = Authentication;
 
+    $scope.defaultImageUrl = 'https://s3.amazonaws.com/rapgenius/filepicker/YaWfEptgQCuVgu0xd3EO_apocalypse.jpg';
 		// Create new Apocalypse
 		$scope.create = function() {
 			// Create new Apocalypse object
 			var apocalypse = new Apocalypses ({
-				name: this.name
+				name: this.name,
+        date: this.date,
+        imageUrl: this.imageUrl
 			});
 
 			// Redirect after save

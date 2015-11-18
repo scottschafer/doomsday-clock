@@ -6,7 +6,12 @@ angular.module('core').directive('clock', [ '$interval',
       scope: {
         'time': '='
       },
-      template: '<h2>Remaining time = {{seconds | number}} seconds</h2>',
+      template:
+      '<h2 style="min-height:50px">' + 
+      '  <span ng-show="seconds">' +
+      '     Remaining time = {{seconds | number}} seconds</h2>' + 
+      '  </span>' +
+      '</h2>',
       restrict: 'E',
       link: function postLink(scope, element, attrs) {
 

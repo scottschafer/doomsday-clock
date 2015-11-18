@@ -2,25 +2,32 @@
   <div class="page-header">
     <h1>New Apocalypse</h1>
   </div>
-  <div class="col-md-12">
-    <form class="form-horizontal" data-ng-submit="create()" novalidate>
-      <fieldset>
-        <div class="form-group">
-          <label class="control-label" for="name">Name</label>
-          <div class="controls">
-            <input type="text" data-ng-model="name" id="name" class="form-control" placeholder="Name" required>
-            <input type="text" data-ng-model="date" id="date" class="form-control" placeholder="Date" required>
-            <input type="text" data-ng-model="imageUrl" id="image" class="form-control" placeholder="Image" required>
-            <img src="{{imageUrl}}">
-          </div>
+  <form class="form-horizontal" data-ng-submit="create()" novalidate>
+    <fieldset>
+      <div class="form-group">
+
+        <div class="col-md-6">
+          <label class="control-label" for="name">The world will end by</label>
+          <input type="text" data-ng-model="name" id="name" class="form-control" placeholder="name of apocalypse"
+                 required>
+
+          <label class="control-label" for="date">on {{date | date}}</label>
+          <datepicker data-ng-model="date" id="date" class="date-picker" placeholder="date"
+                      show-weeks="false" required/>
         </div>
-        <div class="form-group">
-          <input type="submit" class="btn btn-default">
+
+        <div class="col-md-6">
+          <label class="control-label" for="image">Image URL</label>
+          <input type="text" data-ng-model="imageUrl" id="image" class="form-control" placeholder="{{defaultImageUrl}}"
+                 required>
+          <img src="{{imageUrl ? imageUrl : defaultImageUrl}}" style="height:300px">
         </div>
-        <div data-ng-show="error" class="text-danger">
-          <strong data-ng-bind="error"></strong>
-        </div>
-      </fieldset>
-    </form>
-  </div>
+
+        <input type="submit" class="btn btn-default pull-right">
+      </div>
+      <div data-ng-show="error" class="text-danger">
+        <strong data-ng-bind="error"></strong>
+      </div>
+    </fieldset>
+  </form>
 </section>

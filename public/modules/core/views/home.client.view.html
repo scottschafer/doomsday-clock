@@ -1,13 +1,16 @@
 <section data-ng-controller="HomeController">
 
   <div ng-show="! nextApocalypse">
-    No upcoming apocalypses. Whew!
-			</div>
+    <h1>
+      <br><br>
+      No upcoming apocalypses. Whew! The Earth is safe for now.
+    </h1>
+  </div>
 
   <div ng-show="!!nextApocalypse">
     <h1>The world will end by {{nextApocalypse.name}} on {{nextApocalypse.date | date}}.</h1>
     <clock time="nextApocalypse.date"></clock>
     <image src="{{nextApocalypse.imageUrl}}"></image>
-		</div>
+  </div>
 
 </section>
