@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-  db: 'mongodb://scotchfaster:Charon823!@paulo.mongohq.com:10095/mean-on-heroku',
+  db: 'mongodb://scotchfaster:Charon823!@ds055594.mongolab.com:55594/apocalypses',
 // process.env.MONGOHQ_URL || process.env.MONGOLAB_URI || 'mongodb://' + (process.env.DB_1_PORT_27017_TCP_ADDR || 'localhost') + '/doomsday-clock',
 	assets: {
 		lib: {
