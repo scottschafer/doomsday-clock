@@ -16,6 +16,14 @@ var ApocalypseSchema = new Schema({
 		required: 'Please fill Apocalypse name',
 		trim: true
 	},
+    date: {
+      type: Date,
+      default: new Date('1/1/3000')
+    },
+    imageUrl: {
+      type: String,
+      default: 'https://s3.amazonaws.com/rapgenius/filepicker/YaWfEptgQCuVgu0xd3EO_apocalypse.jpg'
+    },
 	created: {
 		type: Date,
 		default: Date.now

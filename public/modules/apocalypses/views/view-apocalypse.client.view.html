@@ -12,8 +12,10 @@
 	</div>
 	<small>
 		<em class="text-muted">
-			Posted on
-			<span data-ng-bind="apocalypse.created | date:'mediumDate'"></span>
+      Apocalypse on
+      <span data-ng-bind="apocalypse.date | date:'mediumDate'"></span>
+      , posted on
+      <span data-ng-bind="apocalypse.created | date:'mediumDate'"></span>
 			by
 			<span data-ng-bind="apocalypse.user.displayName"></span>
 		</em>
